@@ -9,6 +9,11 @@
     <VerticalStackLayout VerticalOptions="CenterAndExpand"
                          Padding="10"
                          Spacing="10">
+        <Label Text="Bem-vindo ao AppHotel!"
+               FontFamily="Kalam"
+               FontSize="20"
+               TextColor="{StaticResource Primary}"
+               Margin="0, 0, 0, 10" />
 
         <Label Text="Cálculo da Diária"
                FontFamily="Kalam"
@@ -88,7 +93,18 @@
                 </Frame>
 
                 <Button Text="Avançar" Clicked="Button_Clicked"   />
-
+                
+                <Button Text="Sobre o App"
+                        Clicked="OnSobreClicked"
+                        BackgroundColor="{StaticResource Secondary}"
+                        TextColor="{StaticResource Black}"
+                        Margin="0, 5, 0, 0" />
+                <Button Text="Configurações"
+                        Clicked="OnConfiguracoesClicked"
+                        BackgroundColor="{StaticResource Secondary}"
+                        TextColor="{StaticResource Black}"
+                        Margin="0, 5, 0, 0" />
+                
             </VerticalStackLayout>
         </Frame>
 

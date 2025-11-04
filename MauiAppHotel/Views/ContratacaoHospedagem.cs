@@ -1,4 +1,5 @@
 using MauiAppHotel.Models;
+using MauiAppHotel.Views; // Adicionado para reconhecer a SobrePage
 
 namespace MauiAppHotel.Views;
 
@@ -7,8 +8,8 @@ public partial class ContratacaoHospedagem : ContentPage
     App PropriedadesApp;
 
     public ContratacaoHospedagem()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
 
         PropriedadesApp = (App)Application.Current;
 
@@ -55,4 +56,14 @@ public partial class ContratacaoHospedagem : ContentPage
         dtpck_checkout.MinimumDate = data_selecionada_checkin.AddDays(1);
         dtpck_checkout.MaximumDate = data_selecionada_checkin.AddMonths(6);
     }
+
+    private async void OnSobreClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new SobrePage());
+    }
+    private async void OnConfiguracoesClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new ConfiguracoesPage());
+    }
+
 }
